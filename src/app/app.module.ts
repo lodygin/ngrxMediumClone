@@ -12,6 +12,7 @@ import {environment} from 'src/environments/environment'
 import {TopBarModule} from './shared/modules/topBar/topBar.module'
 import {PersistenceService} from './shared/services/persistence.service'
 import {AuthInterceptor} from './shared/services/auth.interceptor'
+import {GlobalFeedModule} from './globalFeed/globalFeed.module'
 
 const AuthInterceptorProvider = {
   provide: HTTP_INTERCEPTORS,
@@ -27,6 +28,7 @@ const AuthInterceptorProvider = {
     HttpClientModule,
     AuthModule,
     TopBarModule,
+    GlobalFeedModule,
     EffectsModule.forRoot([]),
     StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({

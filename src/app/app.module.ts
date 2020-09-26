@@ -14,6 +14,9 @@ import {PersistenceService} from './shared/services/persistence.service'
 import {AuthInterceptor} from './shared/services/auth.interceptor'
 import {GlobalFeedModule} from './globalFeed/globalFeed.module'
 import {routerReducer, StoreRouterConnectingModule} from '@ngrx/router-store'
+import {YourFeedModule} from './yourFeed/yourFeed.module'
+import {TagFeedModule} from './tagFeed/tagFeed.module'
+import {ArticleModule} from './article/article.module'
 
 const AuthInterceptorProvider = {
   provide: HTTP_INTERCEPTORS,
@@ -30,6 +33,9 @@ const AuthInterceptorProvider = {
     AuthModule,
     TopBarModule,
     GlobalFeedModule,
+    YourFeedModule,
+    TagFeedModule,
+    ArticleModule,
     EffectsModule.forRoot([]),
     StoreModule.forRoot({router: routerReducer}),
     StoreDevtoolsModule.instrument({

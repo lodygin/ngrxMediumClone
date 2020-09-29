@@ -17,6 +17,8 @@ import {routerReducer, StoreRouterConnectingModule} from '@ngrx/router-store'
 import {YourFeedModule} from './yourFeed/yourFeed.module'
 import {TagFeedModule} from './tagFeed/tagFeed.module'
 import {ArticleModule} from './article/article.module'
+import {CreateArticleModule} from './createArticle/createArticle.module'
+import {EditArticleModule} from './editArticle/editArticle.module'
 
 const AuthInterceptorProvider = {
   provide: HTTP_INTERCEPTORS,
@@ -35,6 +37,8 @@ const AuthInterceptorProvider = {
     GlobalFeedModule,
     YourFeedModule,
     TagFeedModule,
+    CreateArticleModule,
+    EditArticleModule,
     ArticleModule,
     EffectsModule.forRoot([]),
     StoreModule.forRoot({router: routerReducer}),
